@@ -8,9 +8,11 @@
     color: white;
 }
 
+
 a {
     text-decoration: none;
     color: white;
+    line-height: 100%;
 }
 
 #wrapper {
@@ -28,6 +30,7 @@ nav {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 90px);
+    width: 20vw;
     font-size: .8rem;
 }
 
@@ -72,7 +75,8 @@ nav {
 main {
     grid-area: main;
     background-color: var(--secondary-color);
-    overflow-y: auto;
+    overflow-y: scroll;
+    height: calc(100vh - 90px);
 }
 
 .call-to-action {
@@ -92,6 +96,66 @@ main {
  scale: 110%;
 }
 
+.submenù-item {
+    padding: 1em;
+}
+.submenù-item a {
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+}
+
+.submenù-item:hover a {
+    color: white;
+}
+
+.greenline {
+    width: 40%;
+    height: 2px;
+    margin: auto;
+    background-color: var(--selection-highlight);
+}
+
+.recent-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.recent-card {
+    width: calc(100% / 6 - 2em);
+    margin: 1em;
+}
+
+.recent-card figure {
+    position: relative;
+}
+
+.recent-card i {
+    position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4vw;
+        display: none;
+}
+.recent-card:hover {
+    cursor: pointer;
+}
+.recent-card:hover img {
+    filter: brightness(70%);
+}
+
+.recent-card:hover i {
+ display: block;
+}
+
+.recent-card h4 {
+   margin: 1em; 
+}
+.recent-card p {
+    color: var(--secondary-text);
+    text-align: center;
+}
 /* Player */
 
 footer {

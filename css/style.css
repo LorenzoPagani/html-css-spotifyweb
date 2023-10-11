@@ -6,6 +6,7 @@
     --selection-highlight: #ADFF2F;
     --secondary-text: #7A7D81;
     color: white;
+    font-size: 1vw;
 }
 
 
@@ -30,7 +31,7 @@ nav {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 90px);
-    width: 20vw;
+    width: 15vw;
     font-size: .8rem;
 }
 
@@ -50,9 +51,30 @@ nav {
     padding: 1em;
 }
 
+.nav-content i {
+   font-size: 2em;
+   margin-right: .5em;
+}
+
+.nav-content.bottom i {
+    font-size: 1.5em;
+}
+
+.nav-content span {
+   font-size: 2em;
+   margin-right: .2em;
+   color: black;
+   background-color: var(--secondary-text);
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+   text-align: center;
+   font-weight: bolder;
+}
 .nav-content p {
     padding: .3em 1em;
     color: var(--secondary-text);
+    line-height: 220%;
 }
 
 .nav-content h4 {
@@ -76,6 +98,13 @@ nav {
     padding-bottom: 0;
 }
 
+.nav-content.bottom p:hover {
+    border: none;
+}
+
+#account-name {
+    color: white;
+}
 /* Main */
 
 main {
@@ -94,6 +123,7 @@ main::-webkit-scrollbar {
 .call-to-action {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     height: 90px;
 }
 
@@ -112,6 +142,7 @@ main::-webkit-scrollbar {
     padding: 1em;
 }
 .submenù-item a {
+    font-size: .8rem;
     font-weight: bolder;
     text-transform: uppercase;
     color: var(--secondary-text);
@@ -128,21 +159,38 @@ main::-webkit-scrollbar {
     background-color: var(--selection-highlight);
 }
 
-.recent-wrapper {
+/* album section */
+
+.albums > h2,
+.albums > p {
+ margin: 2rem 1rem;
+}
+
+.albums > p {
+    font-size: .8rem;
+    color: var(--secondary-text);
+}
+
+.album-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.recent-card {
-    width: calc(100% / 6 - 2em);
-    margin: 1em;
+
+.album-wrapper.made-for-you, .popular {
+    justify-content: flex-start;
+}
+.album-card {
+    width: calc(100% / 6 - 2rem);
+    margin: 1rem;
+    font-size: .7em;
 }
 
-.recent-card figure {
+.album-card figure {
     position: relative;
 }
 
-.recent-card i {
+.album-card i {
     position: absolute;
         left: 50%;
         top: 50%;
@@ -150,24 +198,31 @@ main::-webkit-scrollbar {
         font-size: 4vw;
         display: none;
 }
-.recent-card:hover {
+.album-card:hover {
     cursor: pointer;
 }
-.recent-card:hover img {
+.album-card:hover img {
     filter: brightness(70%);
 }
 
-.recent-card:hover i {
+.album-card:hover i {
  display: block;
 }
 
-.recent-card h4 {
+.album-card h4 {
    margin: 1em; 
 }
-.recent-card p {
+.album-card p {
     color: var(--secondary-text);
     text-align: center;
 }
+
+.popular .album-card img {
+    border-radius: 50%;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+
 /* Player */
 
 footer {

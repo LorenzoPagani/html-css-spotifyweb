@@ -16,16 +16,55 @@ a {
 #wrapper {
     display: grid;
     grid-template-areas: 
-    'nav main main main main main'
-    'footer footer footer footer footer footer';
+    'nav main main main main main main main '
+    'footer footer footer footer footer footer footer footer';
 }
 
 
-/* Menù */
+/* sidebar */
 
 nav {
     grid-area: nav;background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 90px);
+    font-size: .8rem;
+}
+
+
+.nav-content-wrapper {
+    overflow-y: auto;
+}
+
+.nav-content {
+    width: 80%;
+    padding: 1em;
+}
+
+.nav-content p {
+    padding: .3em 1em;
+    color: var(--secondary-text);
+}
+
+.nav-content h4 {
+    padding: 1rem 0;
+}
+
+.nav-content:hover {
+    cursor: pointer;
+} 
+
+.nav-content p:hover {
+    color: white;
+    border-left: 1px solid var(--selection-highlight);
+    
+    
+}
+
+.nav-content.bottom {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 /* Main */
@@ -39,15 +78,18 @@ main {
 .call-to-action {
     display: flex;
     justify-content: flex-end;
+    height: 90px;
 }
+
 .call-to-action > .button {
  border: 1px solid white;
  border-radius: 30px;
  padding: 1rem 2rem;
  margin: 1rem;
  font-weight: bolder;
- 
- 
+}
+.call-to-action > .button:hover {
+ scale: 110%;
 }
 
 /* Player */

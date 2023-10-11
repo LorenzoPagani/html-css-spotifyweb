@@ -37,6 +37,12 @@ nav {
 
 .nav-content-wrapper {
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.nav-content-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-content {
@@ -76,7 +82,13 @@ main {
     grid-area: main;
     background-color: var(--secondary-color);
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     height: calc(100vh - 90px);
+}
+
+main::-webkit-scrollbar {
+    display: none;
 }
 
 .call-to-action {

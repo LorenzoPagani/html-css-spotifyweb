@@ -1,0 +1,58 @@
+:root {
+    --primary-color: black;
+    --secondary-color: #141922;
+    --secondary-color-dark: #080B12;
+    --third-color: #282828;
+    --selection-highlight: #ADFF2F;
+    --secondary-text: #7A7D81;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas: 
+    'nav main main main main main'
+    'footer footer footer footer footer footer';
+}
+
+
+/* Menù */
+
+nav {
+    grid-area: nav;background-color: var(--primary-color);
+    height: calc(100vh - 90px);
+}
+
+/* Main */
+
+main {
+    grid-area: main;
+    background-color: var(--secondary-color);
+    overflow-y: auto;
+}
+
+.call-to-action {
+    display: flex;
+    justify-content: flex-end;
+}
+.call-to-action > .button {
+ border: 1px solid white;
+ border-radius: 30px;
+ padding: 1rem 2rem;
+ margin: 1rem;
+ font-weight: bolder;
+ 
+ 
+}
+
+/* Player */
+
+footer {
+    grid-area: footer;
+    height: 90px;
+}

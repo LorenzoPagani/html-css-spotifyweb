@@ -269,18 +269,21 @@ footer {
     background-color: var(--third-color);
 }
 
-.player-left {
+.player {
     display: flex;
-    justify-content: space-between;
+    width: 30%;
+}
+
+.player.left {
     align-items: center;
 }
 .song-card {
     display: flex;
     align-items: center;
 }
-.song-card  img {
-    width: 15%;
-    margin: 1rem;
+
+.song-card img {
+ width: 80%;
 }
 
 .song-card .song-name:hover {
@@ -296,3 +299,19 @@ footer {
     cursor: pointer;
     color: white;
 } 
+
+.player.center {
+    flex-direction: column;
+}
+
+.player-controls {
+    text-align: center;
+}
+ .player-controls i{
+    margin: 1em;
+    font-size: 1.5em;
+ }
+
+ .player.right{
+    justify-content: center;
+ }

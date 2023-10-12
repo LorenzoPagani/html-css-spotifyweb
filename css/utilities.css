@@ -116,6 +116,14 @@
 
 .m-auto {margin: auto;}
 
+.m-h-em { margin: .5em; }
+.mt-h-em { margin-top: .5em; }
+.mr-h-em { margin-right: .5em; }
+.mb-h-em { margin-bottom: .5em; }
+.ml-h-em { margin-left: .5em; }
+.my-h-em { margin: .5em 0; }
+.mx-h-em { margin: 0 .5em; }
+
 .m-1em { margin: 1em; }
 .mt-1em { margin-top: 1em; }
 .mr-1em { margin-right: 1em; }

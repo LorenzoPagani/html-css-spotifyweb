@@ -18,13 +18,18 @@
                 <div class="nav-content logo">
                     <img src="img/logo.svg" alt="spotify logo">
                 </div>
-                <div class="nav-content-wrapper">
-                    <div class="nav-content">
-                       
-                        <p><i class="fa-regular fa-house"></i>Home</p>
-                        <p><i class="fa-solid fa-magnifying-glass"></i>Cerca</p>
-                        <p><i class="fa-solid fa-album-collection fa-rotate-90"></i>La tua libreria</p>
+                <div class="nav-content icons"> 
+                    <div class="d-flex f-align-center item">
+                        <img src="img/home.svg" alt="home"><p>Home</p>
                     </div>
+                    <div class="d-flex f-align-center item">
+                        <img src="img/search.svg" alt="Search"><p>Search</p>
+                    </div>
+                    <div class="d-flex f-align-center item">
+                        <img src="img/libreria.svg" alt="La tua libreria"><p>La tua libreria</p>
+                    </div>
+                </div>
+                <div class="nav-content-wrapper">
                     <div class="nav-content">
                         <h4>PLAYLIST</h4>
                         <p> <span>+</span> Crea Playlist</p>
@@ -51,25 +56,30 @@
 
                 <!-- sub-menù -->
 
-                <div class="d-flex w-70 m-auto f-just-between">
+                <div class="submenù d-flex w-70 m-auto f-just-between">
                     <div class="submenù-item">
                         <a href="#">in evidenza</a>
                         <div class="greenline"></div>
                     </div>
                     <div class="submenù-item">
                         <a href="#">podcast</a>
+                        <div class="greenline"></div>
                     </div>
                     <div class="submenù-item">
                         <a href="#">classifiche</a>
+                        <div class="greenline"></div>
                     </div>
                     <div class="submenù-item">
                         <a href="#">generi e mood</a>
+                        <div class="greenline"></div>
                     </div>
                     <div class="submenù-item">
                         <a href="#">nuove uscite</a>
+                        <div class="greenline"></div>
                     </div>
                     <div class="submenù-item">
                         <a href="#">scopri</a>
+                        <div class="greenline"></div>
                     </div>
                 </div>
 
@@ -183,7 +193,26 @@
                 </section>
                     
             </main>
-            <footer class="bg-third">player</footer>
+
+            <!-- player -->
+
+            <footer>
+                <div class="player-left">
+                    <div class="song-card">
+                        <img src="img/sinister.jpeg" alt="sinister">
+                        <div>
+                            <p>Sinister</p>
+                            <p class="song-name alt-txt-col">Brano nome</p>
+                        </div>
+                        <div class="m-1em">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-folder"></i>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+            </footer>
         </div>
     </body>
 </html>

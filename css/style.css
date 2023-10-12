@@ -6,7 +6,7 @@
     --selection-highlight: #ADFF2F;
     --secondary-text: #7A7D81;
     color: white;
-    font-size: 1vw;
+    font-size: clamp(0.3rem, 1vw, 2rem);
 }
 
 
@@ -18,16 +18,17 @@ a {
 
 #wrapper {
     display: grid;
-    grid-template-areas: 
-    'nav main main main main main main main '
-    'footer footer footer footer footer footer footer footer';
+    grid-template-areas:
+        'nav main main main main main main main '
+        'footer footer footer footer footer footer footer footer';
 }
 
 
 /* sidebar */
 
 nav {
-    grid-area: nav;background-color: var(--primary-color);
+    grid-area: nav;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     height: calc(100vh - 90px);
@@ -51,45 +52,64 @@ nav {
     padding: 1em;
 }
 
-.nav-content i {
-   font-size: 2em;
-   margin-right: .5em;
+.nav-content.icons img {
+    width: 15%;
+    margin: .3rem .5rem .3rem 1rem;
+    opacity: .5;
+
+}
+
+.nav-content.icons p {
+    padding: .3em 0;
+}
+.nav-content.icons .item:hover {
+    border-left: 1px solid var(--selection-highlight);
+
+}
+.nav-content.icons .item:hover img {
+    opacity: 1;
+}
+
+.nav-content.icons .item:hover p {
+    color: white;
+}
+
+.nav-content p {
+    padding: .3em 1rem;
+    color: var(--secondary-text);
 }
 
 .nav-content.bottom i {
     font-size: 1.5em;
+    padding-right: .3em;
 }
 
 .nav-content span {
-   font-size: 2em;
-   margin-right: .2em;
-   color: black;
-   background-color: var(--secondary-text);
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   text-align: center;
-   font-weight: bolder;
-}
-.nav-content p {
-    padding: .3em 1em;
-    color: var(--secondary-text);
-    line-height: 220%;
+    font-size: 2em;
+    margin-right: .2em;
+    color: black;
+    background-color: var(--secondary-text);
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    font-weight: bolder;
 }
 
+
 .nav-content h4 {
-    padding: 1rem 0;
+    padding: 1rem 1rem;
 }
 
 .nav-content:hover {
     cursor: pointer;
-} 
+}
 
 .nav-content p:hover {
     color: white;
+}
+.nav-content-wrapper p:hover {
     border-left: 1px solid var(--selection-highlight);
-    
-    
 }
 
 .nav-content.bottom {
@@ -98,13 +118,12 @@ nav {
     padding-bottom: 0;
 }
 
-.nav-content.bottom p:hover {
-    border: none;
-}
+
 
 #account-name {
     color: white;
 }
+
 /* Main */
 
 main {
@@ -124,23 +143,29 @@ main::-webkit-scrollbar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 90px;
+    height: 20vh;
 }
 
-.call-to-action > .button {
- border: 1px solid white;
- border-radius: 30px;
- padding: 1rem 2rem;
- margin: 1rem;
- font-weight: bolder;
+.call-to-action>.button {
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    font-weight: bolder;
 }
-.call-to-action > .button:hover {
- scale: 110%;
+
+.call-to-action>.button:hover {
+    scale: 110%;
+}
+
+.submenù {
+    height: 40px;
 }
 
 .submenù-item {
     padding: 1em;
 }
+
 .submenù-item a {
     font-size: .8rem;
     font-weight: bolder;
@@ -152,21 +177,26 @@ main::-webkit-scrollbar {
     color: white;
 }
 
+.submenù-item:hover .greenline {
+    display: block;
+}
+
 .greenline {
     width: 40%;
     height: 2px;
     margin: auto;
     background-color: var(--selection-highlight);
+    display: none;
 }
 
 /* album section */
 
-.albums > h2,
-.albums > p {
- margin: 2rem 1rem;
+.albums>h2,
+.albums>p {
+    margin: 2rem 1rem;
 }
 
-.albums > p {
+.albums>p {
     font-size: .8rem;
     color: var(--secondary-text);
 }
@@ -177,9 +207,11 @@ main::-webkit-scrollbar {
     justify-content: space-around;
 }
 
-.album-wrapper.made-for-you, .popular {
+.album-wrapper.made-for-you,
+.popular {
     justify-content: flex-start;
 }
+
 .album-card {
     width: calc(100% / 6 - 2rem);
     margin: 1rem;
@@ -192,26 +224,29 @@ main::-webkit-scrollbar {
 
 .album-card i {
     position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 4vw;
-        display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    display: none;
 }
+
 .album-card:hover {
     cursor: pointer;
 }
+
 .album-card:hover img {
     filter: brightness(70%);
 }
 
 .album-card:hover i {
- display: block;
+    display: block;
 }
 
 .album-card h4 {
-   margin: 1em; 
+    margin: 1em;
 }
+
 .album-card p {
     color: var(--secondary-text);
     text-align: center;
@@ -227,5 +262,37 @@ main::-webkit-scrollbar {
 
 footer {
     grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 90px;
+    background-color: var(--third-color);
 }
+
+.player-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.song-card {
+    display: flex;
+    align-items: center;
+}
+.song-card  img {
+    width: 15%;
+    margin: 1rem;
+}
+
+.song-card .song-name:hover {
+    text-decoration: underline;
+}
+.song-card i {
+    color: var(--secondary-text);
+    font-size: 1.2em;
+    margin: .3em;
+}
+
+.song-card i:hover {
+    cursor: pointer;
+    color: white;
+} 

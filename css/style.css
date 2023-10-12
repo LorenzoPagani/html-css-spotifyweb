@@ -29,14 +29,28 @@ a {
 nav {
     grid-area: nav;
     background-color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 20vh);
     width: 15vw;
-    font-size: .8rem;
+   /*  font-size: .8rem; */
 }
 
+.desktop-nav,
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    height: 100%;
+}
+ .mobile-nav {
+    display: none;
+ }
 
+
+ .mobile-content-bottom {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 .nav-content-wrapper {
     overflow-y: auto;
     -ms-overflow-style: none;
@@ -134,7 +148,7 @@ main {
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 20vh);
 }
 
 main::-webkit-scrollbar {
@@ -267,7 +281,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: 20vh;
     background-color: var(--third-color);
 }
 
@@ -414,8 +428,27 @@ footer {
                 MOBILE VERSION
 *************************************************/
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 425px) {
+    
     .album-card {
-        width: calc(100% / 2 - 2rem);
+        width: calc(100% / 2 - 6rem);
+        margin: 3rem;
+        font-size: 1.5em;
     }
+}
+
+/*************************************************
+                XS VERSION
+*************************************************/
+
+@media screen and (max-width: 360px) {
+
+    .desktop-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: flex;
+    }
+
+
 }

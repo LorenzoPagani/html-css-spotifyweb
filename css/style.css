@@ -390,3 +390,32 @@ footer {
         transform: translate(-50%, -50%);
     display: none;
  }
+
+ /* media queries */
+
+ /*************************************************
+                 TABLET VERSION
+ *************************************************/
+
+ @media screen and (max-width: 768px) {
+    
+    :root {
+        font-size: 1.3vw;
+    }
+    .album-wrapper {
+        justify-content: flex-start;
+    }
+    .album-card {
+        width: calc(100% / 4 - 2rem);
+    }
+}
+
+/*************************************************
+                MOBILE VERSION
+*************************************************/
+
+@media screen and (max-width: 576px) {
+    .album-card {
+        width: calc(100% / 2 - 2rem);
+    }
+}

@@ -175,15 +175,14 @@ main::-webkit-scrollbar {
 }
 
 .submenù {
-    height: 40px;
+    margin: 5rem auto;
 }
 
 .submenù-item {
-    padding: 1em;
+    padding: 1rem;
 }
 
 .submenù-item a {
-    font-size: .8rem;
     font-weight: bolder;
     text-transform: uppercase;
     color: var(--secondary-text);
@@ -422,18 +421,43 @@ footer {
     .album-card {
         width: calc(100% / 4 - 2rem);
     }
+    .submenù {
+        font-size: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 /*************************************************
                 MOBILE VERSION
 *************************************************/
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 576px) {
     
     .album-card {
         width: calc(100% / 2 - 6rem);
         margin: 3rem;
         font-size: 1.5em;
+    }
+    .call-to-action {
+        height: 12vh;
+    }
+    .song-card i {
+        display: block;
+    }
+    .song-card figure {
+        width: 50%;
+    }
+    .player.center {
+        margin-bottom: 5rem;
+    }
+    .player-controls {
+        font-size: 1.5em;
+        display: flex;
+    }
+    .bar-1 {
+        width: 20rem;
     }
 }
 
@@ -441,7 +465,7 @@ footer {
                 XS VERSION
 *************************************************/
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 490px) {
 
     .desktop-nav {
         display: none;
